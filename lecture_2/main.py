@@ -5,3 +5,16 @@ def generate_profile(age: int):
         return "Teenager"
     elif 20 <= age:
         return "Adult"
+
+user_name = input("Enter your full name: ")
+birth_year_str = input("Enter your birth year: ")
+birth_year = int(birth_year_str)
+current_age = 2025 - birth_year
+hobbies = []
+while True:
+    hobby = input("Enter a favorite hobby or type 'stop' to finish: ")
+    if hobby == "stop":
+        break
+    hobbies.append(hobby)
+
+
