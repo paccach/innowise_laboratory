@@ -17,4 +17,13 @@ while True:
         break
     hobbies.append(hobby)
 
+life_stage = generate_profile(current_age)
+user_profile = {
+    "Name" : user_name,
+    "Age" : current_age,
+    "Life Stage" : life_stage,
+    "Favorite Hobbies" : hobbies,
+}
+
+
 
