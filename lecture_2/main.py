@@ -19,11 +19,21 @@ while True:
 
 life_stage = generate_profile(current_age)
 user_profile = {
-    "Name" : user_name,
-    "Age" : current_age,
-    "Life Stage" : life_stage,
-    "Favorite Hobbies" : hobbies,
+    "name" : user_name,
+    "age" : current_age,
+    "stage" : life_stage,
+    "hobbies" : hobbies,
 }
 
-
-
+print("---")
+print("Profile Summary:")
+print(f"Name: {user_profile['name']}")
+print(f"Age: {user_profile['age']}")
+print(f"Life Stage: {user_profile['stage']}")
+if not user_profile['hobbies']:
+    print("You didn't mention any hobbies.")
+else:
+    print(f"Favorite Hobbies ({len(user_profile['hobbies'])}):")
+    for i in user_profile["hobbies"]:
+        print(f"- {i}")
+print("---")
