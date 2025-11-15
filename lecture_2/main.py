@@ -1,4 +1,4 @@
-def generate_profile(age):
+def generate_profile(age: int):
     if 0 <= age <= 12:
         return "Child"
     elif 13 <= age <= 19:

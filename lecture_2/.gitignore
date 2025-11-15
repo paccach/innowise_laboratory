@@ -6,6 +6,7 @@ __pycache__/
 *.pyd
 *.pyb
 
+#venv
 venv/
 env/
 ENV/
