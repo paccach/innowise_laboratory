@@ -4,7 +4,7 @@ def main():
         if student_name:
             if not any(s["name"].lower() == student_name.lower() for s in students):
                 #  if student_name not in [student["name"]
-                #   for student in students]:
+                #  for student in students]:
                 student = {"name": student_name, "grades": []}
                 students.append(student)
             else:
