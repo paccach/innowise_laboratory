@@ -1,5 +1,6 @@
 def main():
     def new_student():
+        """Add a new student to the system after validating name uniqueness."""
         student_name = input("Enter student name: ").strip()
         if student_name:
             if not any(s["name"].lower() == student_name.lower() for s in students):
@@ -13,6 +14,7 @@ def main():
             print("Student name cannot be empty.")
 
     def add_grade():
+        """Add grades for an existing student with input validation."""
         student_name = input("Enter a student name: ").strip()
         student = None
         for i in students:
@@ -35,6 +37,7 @@ def main():
             print("This student is not in the system")
 
     def show_report():
+        """Generate and display a comprehensive report of all students and grades."""
         if not students:
             print("No students yet.")
             return
@@ -59,6 +62,7 @@ def main():
             print("There are no grades at all.")
 
     def find_top():
+        """Find and display the student with the highest average grade."""
         try:
             top_student = max(students, key=lambda student: sum(student["grades"]) / len(student["grades"]) if student["grades"] else 0, default=None)
             if top_student:
